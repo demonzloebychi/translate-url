@@ -22,7 +22,8 @@ function transliterate(text) {
         .split('')
         .map(char => transliterationMap[char] || char)
         .join('')
-        .replace(/\s+/g, '-');
+        .replace(/\s+/g, '-')
+        .replace(/\?/g, '')
 }
 
 
