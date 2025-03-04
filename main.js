@@ -14,7 +14,7 @@ function transliterate(text) {
         'Ж': 'Zh', 'З': 'Z', 'И': 'I', 'Й': 'J', 'К': 'K', 'Л': 'L', 'М': 'M',
         'Н': 'N', 'О': 'O', 'П': 'P', 'Р': 'R', 'С': 'S', 'Т': 'T', 'У': 'U',
         'Ф': 'F', 'Х': 'Kh', 'Ц': 'Ts', 'Ч': 'Ch', 'Ш': 'Sh', 'Щ': 'Shch',
-        'Ъ': '', 'Ы': 'Y', 'Ь': '', 'Э': 'E', 'Ю': 'Yu', 'Я': 'Ya'
+        'Ъ': '', 'Ы': 'Y', 'Ь': '', 'Э': 'E', 'Ю': 'Yu', 'Я': 'Ya',
     };
 
     return text
@@ -24,6 +24,11 @@ function transliterate(text) {
         .join('')
         .replace(/\s+/g, '-')
         .replace(/\?/g, '')
+        .replace(/\ь/g, '')
+        .replace(/\ъ/g, '')
+        .replace(/\,/g, '')
+
+
 }
 
 
