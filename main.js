@@ -27,7 +27,7 @@ function transliterate(text) {
         .replace(/\ь/g, '')
         .replace(/\ъ/g, '')
         .replace(/\,/g, '')
-
+        .replace(/\!/g, '')
 
 }
 
